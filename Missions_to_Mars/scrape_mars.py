@@ -40,7 +40,7 @@ def mars_news(browser):
     html = browser.html
     news_soup = bs(html, 'html.parser')
 
-    # Get the required div, the tags are looked by incpectingthe website
+    # Get the required div, the tags by inspecting the website
     tags = news_soup.select_one('div.list_text')
 
     # Save the title & the body to variables
@@ -60,7 +60,7 @@ def featured_image(browser):
     html = browser.html
     images_soup = bs(html, 'html.parser')
 
-    # Get the required div, the tags are looked by incpectingthe website
+    # Get the required div, the tags by inspecting the website
     tags = images_soup.select('div.header')
 
     # get image and append the main url

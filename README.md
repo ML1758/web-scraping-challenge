@@ -18,7 +18,7 @@ Web Scraping Assignment - Milinda 'ML' Liyanage
 * The collected data was then put in dictionaries.
 * The cleaned data frame (table data) was converted to HTML table format prior to saving.
 * A single dictionary was created at the end of scraping with 4 pairs of the scraped data.
-* The created jupyter notebook is [mission_to_mars](Missions_to_Mars/mission_to_mars.ipynb).
+* The created jupyter notebook is called [mission_to_mars](Missions_to_Mars/mission_to_mars.ipynb).
 
 ### The following tasks were done for the second step, creating python code: 
 
@@ -48,12 +48,10 @@ Web Scraping Assignment - Milinda 'ML' Liyanage
 * [index](Missions_to_Mars/templates/index.html)
 
 #### CSS
-* [style](Missions_to_Mars/static/css/style.css) file 
+* [style](Missions_to_Mars/static/css/style.css) 
 
 #### Images
-* [Scrapped Information](Images/scraped_information.png)
-
-
+* [Scraped Information](Images/scraped_information.png)
 
 
 
