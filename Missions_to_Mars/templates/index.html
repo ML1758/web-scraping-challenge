@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Costa Rica Weather</title>
+  <title>Mission to Mars</title>
+
+  <!-- Bootstrap. -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+   <!-- CSS file. -->
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
 </head>
 
 <body>
@@ -16,7 +22,7 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars Data</a></p>
     </div>
 
-
+    <!-- Head line news -->
     <h2>Latest Mars News</h2>
     <div class="row">
       <div class="col-md-12">
@@ -26,18 +32,58 @@
       </div>
     </div>     
 
-
+    <!-- Featured image -->
     <div class="row">
       <div class="col-md-6">
         <h2>Featured Mars Image</h2>
         <img src="{{ mars.featured_image }}" alt="Mars">
       </div>  
     
+      <!-- Facts -->  
       <div class="col-md-6">
         <h2>Mars Facts</h2>
-        <p>{{ mars.facts }}</p>
+          {{ mars.facts | safe }}
       </div>
     </div>
+
+    <!-- Hemispheres heading -->
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="my-3">
+        <h2>Mars Hemispheres</h2>
+      </div>
+    </div>  
+  
+    <!-- 4 Hemispheres -->
+    <div class="row">
+
+      <div class="col-md-3">
+        <img id="single-image" src="{{ mars.hemispheres[0].img_url }}" alt="Cerberus">
+        <h2>{{ mars.hemispheres[0].title }} Enhanced</h2>
+      </div>  
+    
+      <div class="col-md-3">
+        <img id="single-image" src="{{ mars.hemispheres[1].img_url }}" alt="Schiaparelli">
+        <h2>{{ mars.hemispheres[1].title }} Enhanced</h2>
+      </div>
+
+      <div class="col-md-3">
+        <img id="single-image" src="{{ mars.hemispheres[2].img_url }}" alt="Syrtis Major">
+        <h2>{{ mars.hemispheres[2].title }} Enhanced</h2>
+      </div>
+
+      <div class="col-md-3">
+        <img id="single-image" src="{{ mars.hemispheres[3].img_url }}" alt="Valles Marineris">
+        <h2>{{ mars.hemispheres[3].title }} Enhanced</h2>
+      </div>
+    
+  </div>
+    
+
+
+
+
+
 
 
   </div>
